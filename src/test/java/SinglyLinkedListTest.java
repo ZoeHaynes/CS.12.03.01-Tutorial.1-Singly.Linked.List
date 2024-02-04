@@ -38,7 +38,6 @@ class SinglyLinkedListTest<T> {
         sll1.removeLast();
         assertEquals(true, sll1.isEmpty());
         sll1.addLast(5);
-        System.out.println(sll1);
         assertEquals(false, sll1.isEmpty());
 
     }
@@ -98,6 +97,7 @@ class SinglyLinkedListTest<T> {
         assertEquals(13, sll1.peekFirst());
 
         sll1.insert(11, 3);
+
         assertEquals(11, sll1.peekLast());
 
         sll1.insert(12, 2);
@@ -107,6 +107,7 @@ class SinglyLinkedListTest<T> {
         assertEquals(12, sll1.valueAt(2));
         assertEquals(1, sll1.valueAt(3));
         assertEquals(11, sll1.valueAt(4));
+
 
         assertThrows(IllegalArgumentException.class, ()->{ sll1.insert(7,6);});
 
@@ -127,7 +128,6 @@ class SinglyLinkedListTest<T> {
         sll1.removeFirst();
 
         assertEquals(0, sll1.peekFirst());
-
         sll1.removeFirst();
 
         assertEquals(0, sll1.peekFirst());
@@ -149,7 +149,9 @@ class SinglyLinkedListTest<T> {
         sll1.addLast(7);
         sll1.addFirst(8);
 
+
         sll1.removeLast();
+
 
         assertEquals(8, sll1.peekFirst());
         assertEquals(0, sll1.peekLast());
@@ -174,6 +176,7 @@ class SinglyLinkedListTest<T> {
 
         sll1.removeAt(3);
         assertEquals(3, sll1.peekLast());
+
 
         sll1.removeAt(1);
         assertEquals(1, sll1.peekFirst());
