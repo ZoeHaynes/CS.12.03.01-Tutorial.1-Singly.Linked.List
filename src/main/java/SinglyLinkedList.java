@@ -45,18 +45,6 @@ public class SinglyLinkedList<T> {
     // size
     // returns the size of the Singly Linked List.
     public int size() {
-        size = 1;
-        if(head==null){
-            size = 0;
-            return 0;
-        }
-        else{
-            Node curNode = head;
-            while(curNode.next!=null){
-                size++;
-                curNode = curNode.next;
-            }
-        }
         return size;
     }
 
